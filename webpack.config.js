@@ -8,7 +8,7 @@ module.exports = (env) => {
   return {
     entry: './src/app.js',  // Relative path
     output: {
-      path: path.join(__dirname, 'public'),   // Absolute path onde o arquivo será criado
+      path: path.join(__dirname, 'public', 'dist'),   // Absolute path onde o arquivo será criado
       filename: 'bundle.js' // o arquivo pode ter qualquer nome.
     },
     module: {
@@ -41,7 +41,8 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map', // Para mapear o erro no arquivo original e não no bundle.js
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true    // sempre devolve o index.html
+      historyApiFallback: true,    // sempre devolve o index.html
+      publicPath: '/dist/'
     }
   };
 };
