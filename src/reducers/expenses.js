@@ -1,4 +1,6 @@
 // Expenses Reducer
+// The reducer is a pure function that takes the previous state and an action,
+//and returns the next state
 
 const expensesReducerDefaultState = [];
 
