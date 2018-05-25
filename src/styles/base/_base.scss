@@ -1,11 +1,17 @@
+* {
+  box-sizing: border-box; // para as medidas serem feitas pelas extremidades das bordas
+}
+
 html {
   font-size: 62.5%; // Para trabalhar com valores em px *0.1
   // 1.6rem = 16px
 }
 
 body {
+  color: $dark-grey;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
+  line-height: 1.6;
 }
 
 button {
